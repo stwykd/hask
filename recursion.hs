@@ -1,3 +1,14 @@
+-- common factorial
+factorial n = if n > 1
+             then n * factorial n
+             else n
+
+-- tail recursive factorial, wh accumulator
+factorial n = let loop acc n' = if n' > 1 acc
+                               then loop (acc * n') (n' - 1)
+                               else acc
+             in loop 1 n
+
 maximum' :: (Ord a) => [a] -> a
 maximum' [] = error "maximum of empty list"
 maximum' [x] = x
@@ -45,4 +56,4 @@ quicksort [] = []
 quicksort (x:xs) =
     let smallerSorted = quicksort [a | a <- xs, a <= x]
         biggerSorted = quicksort [a | a <- xs, a > x]
-    in  smallerSorted ++ [x] ++ biggerSorted  
+    in  smallerSorted ++ [x] ++ biggerSorted
