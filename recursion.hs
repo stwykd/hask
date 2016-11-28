@@ -7,7 +7,7 @@ factorial n = if n > 1
 factorial n = let loop acc n' = if n' > 1 acc
                                then loop (acc * n') (n' - 1)
                                else acc
-             in loop 1 n
+              in loop 1 n
 
 maximum' :: (Ord a) => [a] -> a
 maximum' [] = error "maximum of empty list"
