@@ -11,4 +11,4 @@ add arg1 arg2 = arg1 + arg2
 -- -> associates to the right, so parens usually omitted in multi-argument function types:
 -- fn :: argType1 -> argType2 -> ... -> argTypeN -> resultType
 
-s-- Good practice to declare types of top-level bindings anyway (compiler warns if missing)
+-- Good practice to declare types of top-level bindings anyway (compiler warns if missing)

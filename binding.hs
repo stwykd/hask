@@ -9,3 +9,9 @@ main = let z = x + y    -- let introduces local bindings
 
 bad = print add 2 3     -- error! (print should have only 1 argument)
 main = print (add 2 3)  -- ok, calls print with 1 argument, 5
+
+-- Haskell uses function currying.
+--   Functions are called one argument at a time.
+--   Consider add 2 3.
+--   This is equivalent to (add 2) 3
+--   (add 2) returns a function which takes one parameter - the second parameter in adding something.

@@ -34,6 +34,12 @@ data Maybe a = Just a
 data Either a b = Left a
                 | Right b
 
+-- Types and constructors can use the same name, since they are in different namespaces.
+-- But, you can have multiple constructors by declaring them with different names.
+-- Constructors additionally don't need to take arguments
+-- Constructors act like functions producing values of their types.
+
+
 
 -- More deconstruction on types ...
 -- Compiler warns if a bound variable not used; _ avoids this
@@ -50,6 +56,8 @@ addMaybes _ _                                = Nothing
 -- ... though often there s a simpler way
 addMaybes (Just x) (Just y) = Just (x + y)
 addMaybes _ _               = Nothing
+
+
 
 -- Exercise
 data Move = Rock | Paper | Scissors deriving (Eq, Read, Show, Enum, Bounded)

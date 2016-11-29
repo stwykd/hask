@@ -1,12 +1,13 @@
--- "|" symbol introduces a guard
--- Guards are evaluated top to bottom; the first True guard wins
--- The system Prelude (standard library) defines otherwise = True
+-- Guards let you shorten function declarations by declaring conditions in which a function occurs:
+--   Pipe ("|") symbol introduces a guard
+--   The first True guard wins. otherwise in Prelude evaluates to true
 factorial n = let loop acc n' | n' > 1 = (acc * n') (n' - 1)
                               | otherwise acc
               in loop 1 n
 
--- Unlike let, a where clause scopes over multiple guarded definitions
--- This is convenient for binding variables to use in guards
+-- Bindings can end with where clauses
+--   Where clauses can scope over multiple guards
+--   Convenient for binding variables to use in guards
 factorial n =
  where loop acc n' | n' > 1 = (acc * n') (n' - 1)
                    | otherwise acc
