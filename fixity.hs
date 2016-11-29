@@ -25,6 +25,8 @@ infixl 1  >>, >>=
 infixr 1  =<<
 infixr 0  $, $!, `seq`
 
+
+-- The "infixr 0" operators
 -- $ is function application, but with lowest precedence
 ($) :: (a -> b) -> a -> b
 f $ x = f x

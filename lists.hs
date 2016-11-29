@@ -1,3 +1,11 @@
+-- We could define homogeneous lists with the data keyword
+data List a = Cons a (List a) | Nil
+oneTwoThree = (Cons 1 (Cons 2 (Cons 3 Nil))) :: List Integer
+
+-- Haskell has built-in lists with syntactic sugar
+-- Instead of List Integer, the type is written [Integer]
+-- Instead of Cons, the constructor is called : and is infix
+-- Instead of Nil, the empty list is called []
 oneTwoThree = 1:2:3:[] :: [Integer]
 
 -- more convenient syntaxes
