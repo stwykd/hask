@@ -3,12 +3,12 @@
 -- parseMove :: String -> Maybe Move
 -- parseMove str = case reads str of [(m, "")] -> Just m
 --                                   _         -> Nothing
--- -- tolerate trailing whitespace
--- -- parseMove :: String -> Maybe Move
--- -- parseMove str = case reads str of
--- --   [(m, rest)] | ok rest -> Just m
--- --   _                     -> Nothing
--- --   where ok = all (`elem` " \r\n")
+-- tolerate trailing whitespace
+-- parseMove :: String -> Maybe Move
+-- parseMove str = case reads str of
+--   [(m, rest)] | ok rest -> Just m
+--   _                     -> Nothing
+--   where ok = all (`elem` " \r\n")
 
 data Point = Point Double Double
 
