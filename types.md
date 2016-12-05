@@ -17,7 +17,7 @@ So add 2 3 is equivalent to (add 2) 3.
 fn :: argType1 -> argType2 -> ... -> argTypeN -> resultType
 ```
 
-Good practice to declare types of top-level bindings anyway (compiler warns if missing)
+Good practice to declare types of top-level bindings anyway (compiler warns if missing).
 
 Type declarations can contain restrictions on type variables.
 Restrictions expressed with "(class type-var, ...) =>" at start of type.
