@@ -1,4 +1,4 @@
-Function reads parses and returns [(value, string_with_rest_of_input)]
+Function reads parses and returns [(value, string_with_rest_of_input)].
 ```haskell
 data Point = Point Double Double deriving (Show, Read)
 
