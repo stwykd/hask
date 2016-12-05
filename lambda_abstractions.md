@@ -9,7 +9,7 @@ countLowercaseAndDigits =
 
 Lambda abstractions can deconstruct values with patterns, e.g.:
 ```haskell
-        ... (\\(Right x) -> x) ...
+ ... (\\(Right x) -> x) ...
 ```
 But note that guards or multiple bindings are not allowed.
 Patterns must have the right constructor or will get run-time error.
